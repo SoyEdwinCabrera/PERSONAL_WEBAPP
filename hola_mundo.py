@@ -1,5 +1,4 @@
 from flask import Flask, render_template_string
-# from httpx import head
 
 app = Flask(__name__)
 
@@ -34,6 +33,6 @@ def hola_mundo():
     """
     
     return render_template_string(contenido_html)
-    
+   
 if __name__ == '__main__':
     app.run(debug=True)
