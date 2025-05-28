@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}">
+    <title>Lista de Libros</title>   
+</head>
+<body>
+    <h1>Lista de Libros</h1>
+    
+    <form action="{{ url_for('agregar_libro') }}" method="POST">
+        <input type="text" name="titulo" placeholder="Título del libro" required>
+        <input type="text" name="autor" placeholder="Autor del libro" required>
+        <button type="submit">Agregar libro</button>
+    </form>
+
+
+    <ul id="lista-libros">
+        {% if libros %}
+            {% for libro in libros %}
+                <li>{{ libro.id }} - {{ libro.titulo }} - {{ libro.autor }}</li>
+            {% endfor %}
+        {% else %}
+            <li>No hay libros en la lista.</li>
+        {% endif %}
+    </ul>
+
+</body>
+</html>
