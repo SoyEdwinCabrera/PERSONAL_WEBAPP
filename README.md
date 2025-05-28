@@ -131,6 +131,49 @@ Sigue estos pasos para ejecutar cualquiera de las aplicaciones incluidas en el p
   pip install --upgrade pytube
   ```
 
+## Estructura del Proyecto
+
+```
+python_flask/
+├── app/
+│   ├── __init__.py
+│   ├── chat.py
+│   ├── libros.py
+│   ├── tareas.py
+│   ├── youtube.py
+│   ├── realtime.py
+│   ├── hola_mundo.py
+│   ├── hola_flask.py
+├── templates/
+│   ├── chat.html
+│   ├── libros.html
+│   ├── tareas.html
+│   ├── youtube.html
+│   ├── realtime.html
+│   ├── holaflask.html
+├── static/
+│   ├── css/
+│   │   ├── chat.css
+├── README.md
+├── requirements.txt
+```
+
+## Instalación de Dependencias
+
+Este proyecto utiliza un archivo `requirements.txt` para gestionar las dependencias necesarias. Esto facilita la instalación de todas las bibliotecas requeridas con un solo comando.
+
+### ¿Cómo instalar las dependencias?
+
+1. Asegúrate de tener Python y pip instalados en tu sistema.
+2. Abre una terminal en el directorio del proyecto.
+3. Ejecuta el siguiente comando:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+--- 
+## Solución de Problemas Comunes
+
 ### Error en la descarga de videos
 - Verifica que el servidor Flask tenga permisos para escribir en el directorio actual.
 - Especifica un directorio de descarga explícito en el código:
