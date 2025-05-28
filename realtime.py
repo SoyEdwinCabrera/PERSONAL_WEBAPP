@@ -30,3 +30,4 @@ def manejar_mensaje(data):
 #TODO: Ejecutar la aplicación Flask con el servidor SocketIO en modo depuración
 if __name__ == '__main__':
     socketIO.run(app, debug=True)
+    
